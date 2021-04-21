@@ -4,3 +4,54 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+/* SLIDER */
+.slider {
+    position: relative;
+    height: 100vh;
+}
+
+.images {
+    height: 100%;
+}
+
+.images img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 50px;
+    width: 50px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    font-size: 30px;
+    line-height: 50px;
+    text-align: center;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+    transition: background-color .3s, border-color .3s;
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: #000;
+    border-color: #fff
+}
+
+
+
