@@ -17,7 +17,10 @@
     <div id="app">
 
         <!-- SLIDER -->
-        <section class="slider">
+        <section
+        @mouseenter="stopLoop"
+        @mouseleave="startLoop"
+        class="slider">
 
             <!-- PREV ARROW -->
             <i @click="prev" class="prev fas fa-chevron-left"></i>

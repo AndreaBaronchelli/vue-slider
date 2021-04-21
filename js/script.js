@@ -12,6 +12,10 @@ const app = new Vue({
             "https://static.photocdn.pt/images/articles/2017/04/28/iStock-546424192.jpg",
         ],
         photosIndex: 0,
+        intervalID: 0,
+    },
+    created() {
+        this.startLoop();
     },
     methods: {
         next() {
@@ -28,6 +32,14 @@ const app = new Vue({
         },
         setPhoto(index) {
             this.photosIndex = index;
+        },
+        startLoop() {
+            this.intervalID = setInterval(() => {
+                this.next(); 
+            }, 3000);
+        },
+        stopLoop() {
+            clearInterval(this.intervalID);
         },
     }
 });
