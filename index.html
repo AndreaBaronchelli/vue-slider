@@ -20,17 +20,25 @@
         <section class="slider">
 
             <!-- PREV ARROW -->
-            <i class="prev fas fa-chevron-left"></i>
+            <i @click="prev" class="prev fas fa-chevron-left"></i>
 
             <!-- IMAGES -->
             <main class="images">
-                <img src="https://images.pexels.com/photos/371633/pexels-photo-371633.jpeg?cs=srgb&dl=clouds-country-daylight-371633.jpg&fm=jpg" alt="">
+                <img :src="photos[photosIndex]" alt="">
             </main>
 
             <!-- NEXT ARROW -->
-            <i class="next fas fa-chevron-right"></i>
+            <i @click="next" class="next fas fa-chevron-right"></i>
 
             <!-- NAV -->
+            <nav class="main-nav">
+                <i 
+                v-for="(photo, index) in photos" 
+                class="fas fa-circle"
+                :class="{ active: index == photosIndex}"
+                @click="setPhoto(index)"
+                ></i>
+            </nav>
         </section>
     </div>
 

@@ -53,5 +53,35 @@
     border-color: #fff
 }
 
+.main-nav {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    width: 200px;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    font-size: 24px;
+    color: rgba(255, 255, 255, .8);
+    background-color: rgba(0, 0, 0, .7);
+    transition: background-color .3s, border-color .3s;
+}
 
+.main-nav:hover {
+    border-color: #fff;
+    background-color: #000;
+}
+
+.main-nav i:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+.main-nav i.active {
+    color: dodgerblue;
+}
 
